@@ -6,22 +6,10 @@ networks:
 
 volumes: 
   mongo_data:
+  node_modules:
+  ame_dist:
 
 services:
-  # nodejs:
-  #   build:
-  #     context: ./node
-  #   ports:
-  #     - 127.0.0.1:7001:7001
-  #   volumes:
-  #     - ./node:/app
-  #     - node_modules:/app/node_modules
-  #   restart: always
-  #   depends_on: 
-  #     - mongo
-  #   networks:
-  #     - ame
-
   mongo:
     build:
       context: ./mongo
@@ -37,4 +25,33 @@ services:
       - ./mongo/initData.sh:/docker-entrypoint-initdb.d/initData.sh
     restart: always
     networks: 
+      - ame
+  
+  nodejs:
+    build:
+      context: .
+    ports:
+      - 127.0.0.1:7001:7001
+    volumes:
+      - ame_dist:/data/ame-dist
+      # - ./ame-server:/app/ame-server
+      # - node_modules:/app/node_modules
+    restart: always
+    depends_on: 
+      - mongo
+    networks:
+      - ame
+
+  creator:
+    build:
+      context: ./ame-creator
+    ports:
+      - 127.0.0.1:8080:8080
+    # volumes:
+      # - ./ame-server:/app/ame-server
+      # - node_modules:/app/node_modules
+    restart: always
+    depends_on: 
+      - nodejs
+    networks:
       - ame
