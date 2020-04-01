@@ -1,0 +1,55 @@
+{
+  "_id": { "$oid": "5e5e46cc294cb2043c845ee5" },
+  "isDeleted": false,
+  "creator": "admin",
+  "projectId": { "$oid": "5c75ec1bbc10ba4598b667f0" },
+  "title": "demo页面",
+  "path": "",
+  "componentList": [
+    {
+      "_id": { "$oid": "5e5e4766294cb2043c845ee6" },
+      "componentId": { "$oid": "5e5e4669294cb2043c845ee3" },
+      "version": "1.0.0",
+      "options": { "title": "测试标题埃及给" }
+    },
+    {
+      "_id": { "$oid": "5e5e47a4294cb2043c845ee7" },
+      "componentId": { "$oid": "5e5e464e294cb2043c845ee2" },
+      "version": "1.0.0",
+      "options": {
+        "title": "首席魔法师1",
+        "tags": [
+          { "title": "呵呵", "color": "#0000ff" },
+          { "title": "是么" },
+          { "title": "不是", "color": "#ff8000" }
+        ]
+      }
+    },
+    {
+      "_id": { "$oid": "5e5e484e294cb2043c845ee8" },
+      "componentId": { "$oid": "5e5e4670294cb2043c845ee4" },
+      "version": "1.0.0",
+      "options": { "title": "这是标题2啊" }
+    },
+    {
+      "_id": { "$oid": "5e5e61f337fd832724901dc2" },
+      "componentId": { "$oid": "5e5e4669294cb2043c845ee3" },
+      "version": "1.0.0",
+      "options": { "title": "逛街瓦吉特" }
+    },
+    {
+      "_id": { "$oid": "5e6f5330cc51fb0814a6039e" },
+      "componentId": { "$oid": "5e5e4670294cb2043c845ee4" },
+      "version": "1.0.0",
+      "options": { "title": "阿济格", "color": "#00ff40" }
+    }
+  ],
+  "componentMap": {
+    "5e5e4669294cb2043c845ee3": { "version": "1.0.0" },
+    "5e5e464e294cb2043c845ee2": { "version": "1.0.0" },
+    "5e5e4670294cb2043c845ee4": { "version": "1.0.0" }
+  },
+  "createdAt": { "$date": { "$numberLong": "1583236812185" } },
+  "updatedAt": { "$date": { "$numberLong": "1585619338802" } },
+  "__v": { "$numberInt": "0" }
+}
