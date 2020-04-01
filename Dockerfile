@@ -15,7 +15,6 @@ ADD ./ame-components-dist /app/ame-components-dist/
 
 # ame-server
 WORKDIR /app
-RUN mkdir /app/ame-server
 COPY ./ame-server/package.json /app/ame-server/
 WORKDIR /app/ame-server
 RUN npm install --registry=https://registry.npm.taobao.org
